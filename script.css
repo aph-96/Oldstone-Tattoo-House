@@ -1,0 +1,8 @@
+document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+  if (
+    link.href === window.location.href ||
+    link.href === window.location.origin + window.location.pathname
+  ) {
+    link.classList.add("active");
+  }
+});
