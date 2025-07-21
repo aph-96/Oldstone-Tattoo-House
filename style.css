@@ -41,9 +41,25 @@ section {
   justify-content: center;
   width: 100%;
 }
+.hero-title {
+  font-family: "Gabriela", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
 .hero-text {
   font-size: 25px;
 }
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+}
+
 .carousel-item img {
   width: 100%;
   height: auto;
