@@ -104,6 +104,16 @@ section {
     margin-right: 15px;
   }
 }
+.card-body {
+  background-color: #a38a00;
+}
+.card-text {
+  font-weight: 600;
+}
+.social-icon i {
+  font-size: 1.5rem;
+  color: white;
+}
 .accordion-wrapper {
   width: 100%;
   margin: 2rem auto;
