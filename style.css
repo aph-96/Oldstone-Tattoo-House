@@ -36,7 +36,7 @@ section {
   color: gold;
 }
 .navbar-color .navbar-nav .nav-link {
-  color: rgb(185, 157, 0); /* white text */
+  color: ccad00;
 }
 .centered-menu {
   display: flex;
@@ -127,8 +127,12 @@ section {
     margin-right: 15px;
   }
 }
+.card-title {
+  font-weight: 600;
+  font-family: "Gabriela", serif;
+}
 .card-body {
-  background-color: #a38a00;
+  background-color: #ccad00;
 }
 
 .card-text {
