@@ -152,13 +152,13 @@ section {
   border: none;
 }
 .accordion-button {
-  background-color: #d4850d;
+  background-color: #ccad00;
   color: #000;
   border: none;
   box-shadow: none;
 }
 .accordion-button:not(.collapsed) {
-  background-color: #d4850d;
+  background-color: #ccad00;
   color: #000;
   box-shadow: none;
 }
