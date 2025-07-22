@@ -168,6 +168,12 @@ section {
 .footer-icon:hover i {
   color: rgb(185, 157, 0);
 }
+.copyright-content {
+  justify-content: center;
+  display: flex;
+  padding-top: 30px;
+  font-size: 14px;
+}
 .custom-gallery {
   padding: 40px;
 }
