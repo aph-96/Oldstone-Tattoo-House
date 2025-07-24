@@ -3,8 +3,9 @@ body {
   color: rgb(185, 157, 0);
 }
 h2,
+h3,
 h5 {
-  text-align: center;
+  text-align: center !important;
 }
 h1 {
   font-family: "Gabriela", serif;
@@ -248,7 +249,14 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-
+.no-bullets {
+  list-style-type: none;
+  padding-left: 0; /* optional, removes indent */
+}
+.bullet-spacing {
+  padding: 10px;
+  text-align: left;
+}
 .piercer-image {
   flex: 1;
   max-width: 100%;
@@ -311,8 +319,14 @@ section {
   }
 }
 .image-with-text {
-  background-color: #252525;
+  background: linear-gradient(90deg, #3a3a3a 0%, #252525 50%, #1a1a1a 100%);
 }
+@media (max-width: 768px) {
+  .image-with-text {
+    padding: 1rem;
+  }
+}
+
 .piercing-image {
   aspect-ratio: 1 / 1; /* Keeps all images square */
   overflow: hidden;
@@ -336,6 +350,30 @@ section {
   width: 33.33%; /* One-third width relative to its container */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove inline spacing */
+}
+.piercing-card {
+  background: linear-gradient(90deg, #3a3a3a 0%, #252525 50%, #1a1a1a 100%);
+}
+.piercing-card p {
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .piercing-card {
+    padding: 1rem;
+  }
+}
+
+.piercing-card .btn {
+  min-width: 180px;
+  max-width: 50%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-primary:hover {
+  background-color: black;
+  border-color: black;
+  color: #ccad00;
 }
 
 form {
