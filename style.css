@@ -2,10 +2,11 @@ body {
   background-color: black;
   color: rgb(185, 157, 0);
 }
-h2 {
+h2,
+h5 {
   text-align: center;
 }
-h3 {
+h1 {
   font-family: "Gabriela", serif;
   font-weight: 400;
   font-style: normal;
@@ -254,6 +255,89 @@ section {
   height: 400px;
   padding-left: 60px;
 }
+#hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* centers the section */
+  height: 500px; /* smaller height */
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px; /* optional: soft corners */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-family: "Gabriela", serif;
+}
+
+.hero-text p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-image-wrapper {
+    height: 200px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+}
+.image-with-text {
+  background-color: #252525;
+}
+.piercing-image {
+  aspect-ratio: 1 / 1; /* Keeps all images square */
+  overflow: hidden;
+}
+
+.piercing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes sure the image fills its space evenly */
+}
+
+@media (max-width: 768px) {
+  .piercer-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.piercing-collage {
+  width: 33.33%; /* One-third width relative to its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove inline spacing */
+}
+
 form {
   max-width: 500px;
   margin: 2rem auto;
