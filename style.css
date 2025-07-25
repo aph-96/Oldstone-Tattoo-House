@@ -249,10 +249,7 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-.no-bullets {
-  list-style-type: none;
-  padding-left: 0; /* optional, removes indent */
-}
+
 .bullet-spacing {
   padding: 10px;
   text-align: left;
