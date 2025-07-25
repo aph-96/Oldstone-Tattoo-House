@@ -64,13 +64,11 @@ section {
 }
 
 .carousel-item img {
-  width: 100%;
-  height: auto;
   max-height: 500px; /* Keeps carousel from getting huge */
   object-fit: cover; /* Crop neatly if needed */
 }
 .hero-text-background {
-  background-color: rgba(98, 98, 98, 0.7);
+  background-color: rgba(84, 104, 103, 0.8);
   padding: 5px;
   border-radius: 20px;
   margin: 20px;
