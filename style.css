@@ -80,7 +80,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid rgb(185, 157, 0) !important;
+  border: 2px solid#4F6362;
 }
 
 .image-container {
@@ -130,7 +130,7 @@ section {
   font-family: "Cinzel", serif;
 }
 .card-body {
-  background-color: #d4850d;
+  background-color: #61b197;
 }
 
 .card-text {
