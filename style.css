@@ -50,37 +50,64 @@ footer {
   justify-content: center;
   width: 100%;
 }
-.hero-title {
-  font-family: "Gabriela", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 60px;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px; /* smaller fixed height */
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%; /* fill the hero container */
+  object-fit: cover;
+  display: block;
 }
 .hero-text {
-  font-size: 25px;
+  position: absolute;
+  bottom: 30px; /* position near bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(203, 161, 53, 0.7);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  max-width: 90vw;
+  text-align: center;
+  box-sizing: border-box;
+  max-height: 100%; /* avoid text block taking full height */
 }
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
+.hero-text h1 {
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+}
+.hero-text p {
+  margin: 0;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+@media (max-width: 600px) {
+  .hero {
+    height: 220px; /* smaller height on mobile */
   }
-
   .hero-text {
-    font-size: 1rem;
+    bottom: 10px;
+    padding: 0.75rem 1rem;
+    max-height: none; /* let it size to content */
+    width: 90vw;
+  }
+  .hero-text h1 {
+    font-size: 18px !important; /* smaller title on mobile */
+  }
+  .hero-text p {
+    font-size: 15px; /* smaller paragraph text on mobile */
   }
 }
-
-.carousel-item img {
-  max-height: 500px; /* Keeps carousel from getting huge */
-  object-fit: cover; /* Crop neatly if needed */
+@media (min-width: 768px) {
+  .hero-text h1 {
+    white-space: nowrap;
+  }
 }
-.hero-text-background {
-  background-color: rgba(84, 104, 103, 0.8);
-  padding: 5px;
-  border-radius: 20px;
-  margin: 20px;
-  color: white;
-}
-
 .card {
   height: 100%;
   display: flex;
@@ -120,11 +147,6 @@ footer {
   transform: scale(1.05);
 }
 
-.btn {
-  color: white;
-  background-color: rgb(185, 157, 0);
-  border: rgb(185, 157, 0);
-}
 @media (max-width: 767.98px) {
   .card {
     margin-left: 15px;
@@ -144,7 +166,7 @@ footer {
 }
 .social-icon i {
   font-size: 1.5rem;
-  color: white;
+  color: #000;
 }
 .accordion-wrapper {
   width: 100%;
@@ -163,7 +185,7 @@ footer {
   box-shadow: none;
 }
 .accordion-button:not(.collapsed) {
-  background-color: #ccad00;
+  background-color: #cba135;
   color: #000;
   box-shadow: none;
 }
@@ -208,14 +230,14 @@ footer {
 }
 
 .footer-icon:hover i {
-  color: gold;
+  color: #cba135;
 }
 .footer-icon i {
   font-size: 1.5rem;
-  color: rgb(185, 157, 0);
+  color: #cba135;
 }
 .footer-icon:hover i {
-  color: rgb(185, 157, 0);
+  color: #cba135;
 }
 .copyright-content {
   justify-content: center;
@@ -263,16 +285,6 @@ footer {
   height: 400px;
   padding-left: 60px;
 }
-#hero {
-  width: 100%;
-  overflow: hidden;
-}
-
-.hero-image-wrapper {
-  justify-content: center;
-  margin: 0 auto; /* centers the section */
-  height: 800px; /* smaller height */
-}
 
 .hero-image-wrapper-p {
   position: relative;
@@ -289,40 +301,6 @@ footer {
   border-radius: 10px; /* optional: soft corners */
 }
 
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
-.hero-text h1 {
-  font-size: 2rem;
-  font-family: "Gabriela", serif;
-}
-
-.hero-text p {
-  font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-  .hero-image-wrapper {
-    height: 200px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-text p {
-    font-size: 0.9rem;
-  }
-}
 .image-with-text {
   background: linear-gradient(90deg, #3a3a3a 0%, #252525 50%, #1a1a1a 100%);
 }
@@ -378,7 +356,7 @@ footer {
 .btn-primary:hover {
   background-color: black;
   border-color: black;
-  color: #ccad00;
+  color: #cba135;
 }
 
 form {
@@ -416,7 +394,7 @@ form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="file"]:focus,
 form textarea:focus {
-  border-color: #b99d00; /* matching your gold-ish color */
+  border-color: #cba135; /* matching your gold-ish color */
   outline: none;
 }
 
@@ -426,7 +404,7 @@ form textarea {
 }
 
 form button {
-  background-color: #b99d00; /* gold color */
+  background-color: #cba135; /* gold color */
   color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -437,7 +415,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #a38a00;
+  background-color: #cba135;
 }
 
 form input[type="file"] {
