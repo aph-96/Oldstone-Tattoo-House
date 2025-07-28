@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  color: rgb(185, 157, 0);
+  color: #cba135;
 }
 h2,
 h3,
@@ -15,6 +15,7 @@ h1 {
 }
 section {
   padding-bottom: 15px;
+  padding-top: 15px;
 }
 .container {
   margin-top: 1.5rem !important;
@@ -80,7 +81,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid#4F6362;
+  border: 2px solid#cba135;
 }
 
 .image-container {
@@ -130,7 +131,7 @@ section {
   font-family: "Cinzel", serif;
 }
 .card-body {
-  background-color: #61b197;
+  background-color: #cba135;
 }
 
 .card-text {
@@ -151,7 +152,7 @@ section {
   border: none;
 }
 .accordion-button {
-  background-color: #ccad00;
+  background-color: #cba135;
   color: #000;
   border: none;
   box-shadow: none;
