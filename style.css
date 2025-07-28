@@ -17,6 +17,11 @@ section {
   padding-bottom: 15px;
   padding-top: 15px;
 }
+footer {
+  border-top: 1px solid #cba135;
+  padding-bottom: 1rem;
+}
+
 .container {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
