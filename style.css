@@ -12,6 +12,8 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 50px !important;
+  text-align: center;
+  color: #cba135;
 }
 section {
   padding-bottom: 15px;
@@ -173,6 +175,9 @@ footer {
   margin: 2rem auto;
   padding: 0 1rem;
 }
+.accordion-header {
+  font-size: 50px;
+}
 .accordion-item {
   background-color: #696868;
   color: #fff;
@@ -183,6 +188,7 @@ footer {
   color: #000;
   border: none;
   box-shadow: none;
+  font-weight: 500;
 }
 .accordion-button:not(.collapsed) {
   background-color: #cba135;
@@ -358,66 +364,144 @@ footer {
   border-color: black;
   color: #cba135;
 }
-
-form {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+/* SECTION STYLING */
+.contact-info {
+  background-color: #0e0e0e;
+  color: #fefefe;
+  padding: 60px 20px;
 }
 
-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #333;
+/* FLEX SPLIT */
+.contact-split {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch; /* make left/right align in height */
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="file"],
-form textarea {
+/* LEFT SIDE */
+.contact-left {
+  flex: 1 1 40%;
+  max-width: 450px; /* controls how narrow it is */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-left h2 {
+  font-size: 2rem;
+  color: #cba135;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* CONTACT GRID STACKED IN 1 COLUMN */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  text-decoration: none; /* remove underline from link */
+  color: #fefefe; /* make sure text color stays */
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+.contact-box i {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #cba135;
+}
+
+.contact-box p {
+  margin: 0;
+}
+
+.contact-box a {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+.contact-box p {
+  margin: 0;
+  margin-top: 8px;
+}
+/* RIGHT SIDE: IMAGE */
+.contact-right {
+  flex: 1 1 50%;
+  padding: 20px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.contact-right img {
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  margin-bottom: 1.25rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="file"]:focus,
-form textarea:focus {
-  border-color: #cba135; /* matching your gold-ish color */
-  outline: none;
-}
+/* RESPONSIVE STACK ON MOBILE */
+@media (max-width: 768px) {
+  .contact-split {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
+  .contact-left,
+  .contact-right {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
 
-form button {
-  background-color: #cba135; /* gold color */
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  .contact-left h2 {
+    text-align: center;
+  }
 
-form button:hover {
-  background-color: #cba135;
-}
+  .contact-grid {
+    align-items: center;
+  }
 
-form input[type="file"] {
-  cursor: pointer;
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-box {
+    width: 280px; /* or use min-width if you want flexibility */
+    max-width: 90vw; /* responsive safeguard */
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-box i {
+    margin: 0 0 10px 0;
+    display: block;
+  }
 }
