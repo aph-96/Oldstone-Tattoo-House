@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #000;
   color: #cba135;
 }
 h2,
@@ -19,9 +19,27 @@ section {
   padding-bottom: 15px;
   padding-top: 15px;
 }
-.navbar-color {
+/*
+.header-navigation {
   background: linear-gradient(90deg, #3a3a3a 0%, #252525 50%, #1a1a1a 100%);
+  padding-bottom: 0px !important;
 }
+  */
+.navbar-nav .nav-link {
+  color: #ffffff;
+  position: relative;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #d4af37;
+}
+
 footer {
   border-top: 1px solid #cba135;
   padding-bottom: 1rem;
@@ -34,7 +52,6 @@ footer {
 }
 .navbar-nav .nav-link.active {
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .navbar-brand {
@@ -45,9 +62,6 @@ footer {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(185,157,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-.navbar-color {
-  background-color: black;
-}
 .navbar-color .navbar-nav .nav-link {
   color: #ccad00;
 }
