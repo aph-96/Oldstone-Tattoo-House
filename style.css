@@ -64,6 +64,9 @@ footer {
   object-fit: cover;
   display: block;
 }
+.hero-title {
+  color: #0e0e0e;
+}
 .hero-text {
   position: absolute;
   bottom: 30px; /* position near bottom */
