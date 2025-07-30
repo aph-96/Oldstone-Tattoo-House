@@ -19,9 +19,13 @@ section {
   padding-bottom: 15px;
   padding-top: 15px;
 }
+.navbar-color {
+  background: linear-gradient(90deg, #3a3a3a 0%, #252525 50%, #1a1a1a 100%);
+}
 footer {
   border-top: 1px solid #cba135;
   padding-bottom: 1rem;
+  background: linear-gradient(90deg, #3a3a3a 0%, #252525 50%, #1a1a1a 100%);
 }
 
 .container {
@@ -227,7 +231,6 @@ footer {
 }
 .footer {
   background-color: black;
-  color: var(--gold);
   padding: 2rem 1rem;
   text-align: center;
 }
@@ -237,7 +240,9 @@ footer {
   margin: 0 0.5rem;
   text-decoration: none;
 }
-
+.footer-text {
+  color: #cba135 !important;
+}
 .footer-icon:hover i {
   color: #cba135;
 }
