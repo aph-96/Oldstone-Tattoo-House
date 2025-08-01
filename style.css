@@ -70,24 +70,35 @@ footer {
   justify-content: center;
   width: 100%;
 }
+
 .hero {
   position: relative;
   width: 100%;
-  height: 500px; /* smaller fixed height */
+  height: 700px;
   overflow: hidden;
+  background-color: #000; /* fallback in case image doesn't load */
 }
+
 .hero img {
   width: 100%;
-  height: 100%; /* fill the hero container */
+  height: 100%;
   object-fit: cover;
+  image-rendering: auto;
   display: block;
 }
+
+/* Optional: if your subject is lower in the image, shift the focus */
+.hero img.focus-lower {
+  object-position: center 70%;
+}
+
 .hero-title {
   color: #0e0e0e;
 }
+
 .hero-text {
   position: absolute;
-  bottom: 30px; /* position near bottom */
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(203, 161, 53, 0.7);
@@ -98,39 +109,47 @@ footer {
   max-width: 90vw;
   text-align: center;
   box-sizing: border-box;
-  max-height: 100%; /* avoid text block taking full height */
 }
+
 .hero-text h1 {
   margin: 0 0 0.5rem;
   font-weight: 400;
   font-size: clamp(1.5rem, 6vw, 2.5rem);
 }
+
 .hero-text p {
   margin: 0;
   font-size: clamp(1rem, 3vw, 1.25rem);
 }
+
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
   .hero {
-    height: 220px; /* smaller height on mobile */
+    height: 270px;
   }
+
   .hero-text {
     bottom: 10px;
     padding: 0.75rem 1rem;
-    max-height: none; /* let it size to content */
     width: 90vw;
   }
+
   .hero-text h1 {
-    font-size: 18px !important; /* smaller title on mobile */
+    font-size: 18px !important;
   }
+
   .hero-text p {
-    font-size: 15px; /* smaller paragraph text on mobile */
+    font-size: 15px;
   }
 }
+
+/* Prevent text wrapping too early on tablets/desktops */
 @media (min-width: 768px) {
   .hero-text h1 {
     white-space: nowrap;
   }
 }
+
 .card {
   height: 100%;
   display: flex;
