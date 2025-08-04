@@ -400,10 +400,15 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-.btn-primary:hover {
+.btn-primary {
   background-color: black;
   border-color: black;
   color: #cba135;
+}
+.btn-primary:hover {
+  background-color: #cba135;
+  border-color: #cba135;
+  color: #000;
 }
 /* SECTION STYLING */
 .contact-info {
