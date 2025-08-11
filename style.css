@@ -123,17 +123,20 @@ footer {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 769px) {
+@media (max-width: 600px) {
   .hero {
     height: 270px;
   }
 
-  .hero-text {
-    bottom: 10px;
-    padding: 0.4rem 0.6rem; /* reduced padding */
-    width: auto; /* let it size to text instead of forcing 90vw */
-    max-width: 80vw;
-    line-height: 1.2; /* tighten text spacing */
+  @media (max-width: 769px) {
+    .hero-text {
+      bottom: 10px;
+      padding: 0.4rem 0.6rem;
+      width: auto;
+      max-width: 60vw; /* reduced from 80vw */
+      line-height: 1.2;
+      border-radius: 12px; /* optional: rounder corners */
+    }
   }
 
   .hero-text h1 {
