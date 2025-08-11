@@ -347,6 +347,7 @@ footer {
   display: block;
   border-radius: 10px; /* optional: soft corners */
 }
+
 @media (max-width: 768) {
   .piercing-title {
     font-size: 20px !important;
