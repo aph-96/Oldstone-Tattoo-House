@@ -11,7 +11,7 @@ h1 {
   font-family: "Gabriela", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 50px !important;
+  font-size: 30px !important;
   text-align: center;
   color: #cba135;
 }
@@ -98,7 +98,7 @@ footer {
 
 .hero-text {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(203, 161, 53, 0.7);
@@ -128,32 +128,27 @@ footer {
     height: 270px;
   }
 
-  @media (max-width: 769px) {
-    .hero-text {
-      bottom: 10px;
-      padding: 0.4rem 0.6rem;
-      width: auto;
-      max-width: 60vw; /* reduced from 80vw */
-
-      border-radius: 12px; /* optional: rounder corners */
-    }
+  .hero-text {
+    bottom: 10px;
+    padding: 0.75rem 1rem;
+    width: 90%; /* extend container width */
+    max-width: 90%; /* keep it full but not edge-to-edge */
+    left: 50%; /* still centered */
+    transform: translateX(-50%);
+    border-radius: 12px;
+    box-sizing: border-box; /* ensure padding stays inside */
+    white-space: normal; /* allow wrapping */
+    word-wrap: break-word; /* break long words if needed */
   }
 
   .hero-text h1 {
     font-size: 18px !important;
-    margin-bottom: 0.25rem; /* small gap */
+    margin-bottom: 0.25rem;
   }
 
   .hero-text p {
     font-size: 15px;
-    margin: 0; /* remove default paragraph margin */
-  }
-}
-
-/* Prevent text wrapping too early on tablets/desktops */
-@media (min-width: 768px) {
-  .hero-text h1 {
-    white-space: nowrap;
+    margin: 0;
   }
 }
 
