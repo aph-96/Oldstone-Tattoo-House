@@ -25,6 +25,9 @@ section {
   padding-bottom: 0px !important;
 }
   */
+a {
+  color: #cba135;
+}
 .navbar-nav .nav-link {
   color: #ffffff;
   position: relative;
